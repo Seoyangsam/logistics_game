@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="zh"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;title&gt;最强仓库主管挑战赛&lt;/title&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">*{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin:0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>box-sizing:border-box;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">body{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>overflow:hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family:"Microsoft YaHei";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:linear-gradient(135deg,#021B79,#0575E6);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:white;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* 星空背景 */</p>
+<p class="p1">.stars{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position:absolute;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width:100%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height:100%;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.star{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position:absolute;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width:2px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height:2px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:white;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius:50%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>animation: twinkle 2s infinite alternate;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">@keyframes twinkle{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>from{opacity:.2;}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>to{opacity:1;}</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* 主容器 */</p>
+<p class="p1">.container{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position:relative;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>z-index:10;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height:100vh;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-direction:column;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>justify-content:center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items:center;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* 标题 */</p>
+<p class="p1">.title{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:58px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight:bold;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-shadow:0 0 20px cyan;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>animation: glow 2s infinite alternate;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">@keyframes glow{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>from{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-shadow:0 0 10px cyan;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>to{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-shadow:0 0 40px cyan;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* 副标题 */</p>
+<p class="p1">.subtitle{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top:25px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:28px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:#FFD700;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* 倒计时 */</p>
+<p class="p1">.timer{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top:50px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:50px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:#ff5b5b;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight:bold;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* 提示文字 */</p>
+<p class="p1">.tip{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top:20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:24px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* 开始按钮 */</p>
+<p class="p1">.start-btn{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top:60px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width:300px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height:80px;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>border:none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius:50px;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:linear-gradient(90deg,#ff9900,#ff6600);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:white;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:30px;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>cursor:pointer;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>box-shadow:0 0 30px orange;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>transition:.4s;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.start-btn:hover{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transform:scale(1.08);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* AGV动画 */</p>
+<p class="p2"><br></p>
+<p class="p1">.agv{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position:absolute;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>bottom:80px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>left:-180px;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:60px;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>animation:run 15s linear infinite;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">@keyframes run{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>from{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>left:-180px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>to{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>left:110%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* 地图线条 */</p>
+<p class="p2"><br></p>
+<p class="p1">.line{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position:absolute;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>width:600px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height:2px;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:cyan;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>top:75%;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>opacity:.5;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>animation:flow 2s infinite;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">@keyframes flow{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>0%{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>box-shadow:0 0 0 cyan;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>100%{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>box-shadow:0 0 30px cyan;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.footer{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position:absolute;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>bottom:20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:18px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:#ddd;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- 星空 --&gt;</p>
+<p class="p1">&lt;div class="stars"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- 流光线 --&gt;</p>
+<p class="p1">&lt;div class="line"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- AGV --&gt;</p>
+<p class="p1">&lt;div class="agv"&gt;</p>
+<p class="p1">🚗📦📦📦</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="container"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="title"&gt;</p>
+<p class="p1">🍊 最强仓库主管挑战赛</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="subtitle"&gt;</p>
+<p class="p1">帮助寻乌脐橙48小时送达全国</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="timer"&gt;</p>
+<p class="p1">⏰ 48:00:00</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="tip"&gt;</p>
+<p class="p1">请化身仓库主管，完成智慧物流挑战！</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;button class="start-btn"</p>
+<p class="p1">onclick="startGame()"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">开始挑战 →</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="footer"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">《供应链智慧仓配运营》</p>
+<p class="p1">AGV智能搬运——让农产品跑出乡村振兴“加速度”</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">// 生成星空背景</p>
+<p class="p1">let stars=document.querySelector(".stars");</p>
+<p class="p2"><br></p>
+<p class="p1">for(let i=0;i&lt;200;i++){</p>
+<p class="p2"><br></p>
+<p class="p1">let star=document.createElement("div");</p>
+<p class="p2"><br></p>
+<p class="p1">star.className="star";</p>
+<p class="p2"><br></p>
+<p class="p1">star.style.left=Math.random()*100+"%";</p>
+<p class="p2"><br></p>
+<p class="p1">star.style.top=Math.random()*100+"%";</p>
+<p class="p2"><br></p>
+<p class="p1">star.style.animationDelay=Math.random()*3+"s";</p>
+<p class="p2"><br></p>
+<p class="p1">stars.appendChild(star);</p>
+<p class="p2"><br></p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">// 开始按钮</p>
+<p class="p2"><br></p>
+<p class="p1">function startGame(){</p>
+<p class="p2"><br></p>
+<p class="p1">alert("🍊挑战开始！\n\n第一关：如何运输100箱脐橙？");</p>
+<p class="p2"><br></p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
