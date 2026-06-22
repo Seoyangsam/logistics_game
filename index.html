@@ -1,0 +1,371 @@
+
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>最强仓库主管挑战</title>
+
+<style>
+    body{
+    margin:0;
+    background:linear-gradient(135deg,#0f4c81,#1e88e5);
+    font-family:"Microsoft YaHei";
+    color:white;
+}
+
+.container{
+
+    width:800px;
+
+    margin:40px auto;
+
+    text-align:center;
+
+    background:rgba(255,255,255,0.1);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    box-shadow:0 0 30px rgba(255,255,255,.2);
+
+}
+
+h1{
+
+    color:#FFD700;
+
+    font-size:50px;
+
+}
+
+#progress{
+
+    font-size:28px;
+
+    margin-top:20px;
+
+}
+
+#score{
+
+    margin-top:15px;
+
+    color:#FFD700;
+
+    font-size:26px;
+
+}
+
+#title{
+
+    margin-top:40px;
+
+    color:#FFD700;
+
+    font-size:36px;
+
+}
+
+#question{
+
+    margin-top:30px;
+
+    font-size:28px;
+
+    line-height:55px;
+
+}
+
+button{
+
+    width:320px;
+
+    height:70px;
+
+    margin:20px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#ff9800;
+
+    color:white;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:scale(1.05);
+
+    background:#ff5722;
+
+}
+
+#feedback{
+
+    margin-top:40px;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    line-height:50px;
+
+}
+
+#timer{
+
+    margin-top:20px;
+
+    color:#ffeb3b;
+
+    font-size:40px;
+
+    font-weight:bold;
+
+}
+</style>
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🍊 最强仓库主管挑战</h1>
+
+<div id="progress">
+第一关 █□□
+</div>
+
+<div id="score">
+⭐ 得分：0
+</div>
+
+<div id="questionArea">
+
+<h2 id="title">
+第一关：运输100箱脐橙
+</h2>
+
+<p id="question">
+北京客户订购100箱寻乌脐橙，
+要求48小时内送达。
+请选择最优方案：
+</p>
+
+<div id="timer"></div>
+
+<button onclick="checkAnswer(0)">
+👷 人工搬运
+</button>
+
+<button onclick="checkAnswer(1)">
+🚜 叉车搬运
+</button>
+
+<button onclick="checkAnswer(2)">
+🤖 AGV智能搬运
+</button>
+
+</div>
+
+<div id="feedback"></div>
+
+</div>
+
+<script>
+    let score = 0;
+let currentLevel = 1;
+
+// 正确答案
+const answers = [2,2,2];
+
+// 第三关倒计时
+let countdown;
+
+// 点击按钮判断
+function checkAnswer(choice){
+
+    if(choice===answers[currentLevel-1]){
+
+        score += 10;
+
+        document.getElementById("score").innerHTML=
+        "⭐ 得分："+score;
+
+        if(currentLevel===1){
+
+            document.getElementById("feedback").innerHTML=
+            "✅ +10分<br>效率提升，是智慧物流的第一步！";
+
+            setTimeout(level2,1500);
+        }
+
+        else if(currentLevel===2){
+
+            document.getElementById("feedback").innerHTML=
+            "✅ +10分<br>科技创新是新质生产力的重要支撑！";
+
+            setTimeout(level3,1500);
+        }
+
+        else{
+
+            finishGame();
+
+        }
+
+    }
+
+    else{
+
+        document.getElementById("feedback").innerHTML=
+        "❌ 请重新思考！";
+
+    }
+
+}
+
+
+// 第二关
+function level2(){
+
+    currentLevel=2;
+
+    document.getElementById("progress").innerHTML=
+    "第二关 ██□";
+
+    document.getElementById("title").innerHTML=
+    "第二关：仓库只有2名员工";
+
+    document.getElementById("question").innerHTML=
+    "突发情况！<br><br>仓库只有2名员工，如何提高效率？";
+
+    document.getElementById("feedback").innerHTML="";
+
+    document.getElementById("timer").innerHTML="";
+
+    let buttons=document.getElementsByTagName("button");
+
+    buttons[0].innerHTML="➕ 增加人工";
+
+    buttons[1].innerHTML="⏰ 延迟发货";
+
+    buttons[2].innerHTML="🤖 使用智能设备";
+
+}
+
+
+
+// 第三关
+function level3(){
+
+    currentLevel=3;
+
+    document.getElementById("progress").innerHTML=
+    "第三关 ███";
+
+    document.getElementById("title").innerHTML=
+    "第三关：如何降低生鲜损耗";
+
+    document.getElementById("question").innerHTML=
+    "生鲜保卫战！<br><br>如何降低脐橙运输损耗？";
+
+    document.getElementById("feedback").innerHTML="";
+
+    let buttons=document.getElementsByTagName("button");
+
+    buttons[0].innerHTML="📦 随机堆放";
+
+    buttons[1].innerHTML="👷 人工搬运";
+
+    buttons[2].innerHTML="🤖 AGV智能搬运";
+
+
+    // 10秒倒计时
+
+    let time=10;
+
+    document.getElementById("timer").innerHTML=
+    "⏰ "+time+" 秒";
+
+    countdown=setInterval(function(){
+
+        time--;
+
+        document.getElementById("timer").innerHTML=
+        "⏰ "+time+" 秒";
+
+        if(time<=0){
+
+            clearInterval(countdown);
+
+        }
+
+    },1000);
+
+}
+
+
+
+// 挑战成功
+
+function finishGame(){
+
+    clearInterval(countdown);
+
+    document.getElementById("questionArea").innerHTML=`
+
+<h2 style="color:#FFD700;font-size:45px">
+
+🏆 新时代物流工匠
+
+</h2>
+
+<h1>
+
+⭐ 总分：${score}
+
+</h1>
+
+<p style="font-size:30px;line-height:60px">
+
+AGV搬运的不仅是一箱脐橙，
+
+<br><br>
+
+更承载着果农增收的希望。
+
+<br><br>
+
+让农产品跑得更快，
+
+让果农笑得更甜！
+
+</p>
+
+<h2 style="color:#ffeb3b">
+
+🚗 请观察现场AGV运行过程
+
+</h2>
+
+`;
+
+}
+
+
+
+</script>
+
+</body>
+</html>
